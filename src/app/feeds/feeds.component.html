@@ -1,0 +1,12 @@
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="getFeeds()===undefined"></mat-spinner>
+    <mat-card *ngFor="let feed of getFeeds();" style="margin-top:11px;">
+        <mat-card-header>
+            <mat-card-title>{{feed.title}}</mat-card-title>
+            <mat-card-subtitle>{{feed.pubDate}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <a mat-button href="{{feed.url}}" target="_blank">Goto Link</a>
+        </mat-card-actions>
+    </mat-card>
+</div>

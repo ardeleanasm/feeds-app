@@ -36,10 +36,6 @@ export class EntryComponent implements OnInit {
     
   }
 
-  gotItems() {
-    return this.receivedItems;
-  }
-
   getItems() {
     return this.receivedItems;
   }

@@ -13,13 +13,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FeedsComponent } from './feeds/feeds.component';
+import { FeedsService } from './feeds/feeds.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    EntryComponent
+    EntryComponent,
+    FeedsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatCardModule,
     MatProgressSpinnerModule
   ],
-  providers: [EntryService],
+  providers: [EntryService,FeedsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

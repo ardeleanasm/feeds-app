@@ -1,5 +1,5 @@
 <div style="padding: 13px;">
-    <mat-spinner *ngIf="gotItems()===undefined"></mat-spinner>
+    <mat-spinner *ngIf="getItems()===undefined"></mat-spinner>
     <mat-card *ngFor="let item of getItems().entries;" style="margin-top:11px;">
         <mat-card-header>
             <mat-card-title>{{item.title}}</mat-card-title>
