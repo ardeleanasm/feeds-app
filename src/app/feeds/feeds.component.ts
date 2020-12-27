@@ -17,7 +17,8 @@ export class FeedsComponent implements OnInit {
   }
 
   ngOnInit():void {
-    
+    this.clear();
+    this.performRequest();
   }
 
   performRequest() {
@@ -27,10 +28,7 @@ export class FeedsComponent implements OnInit {
     )
   }
 
-  showFeeds() {
-
-    this.performRequest();
-  }  
+ 
 
   clear() {
     this.receivedItems = undefined;
@@ -39,13 +37,11 @@ export class FeedsComponent implements OnInit {
   }
 
   gotItems() {
-    console.log("In gotItems "+this.receivedItems );
     return this.receivedItems;
   }
 
   getFeeds() {
-    
-    return this.receivedItems[1].title;
+    return this.receivedItems;
   }
 
 }
