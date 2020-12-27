@@ -1,14 +1,14 @@
-  <div style="padding: 13px;">
+<div style="padding: 13px;">
     <mat-spinner *ngIf="gotItems()===undefined"></mat-spinner>
-    <mat-card *ngFor="let feed of getFeeds().entries;" style="margin-top:11px;">
+    <mat-card *ngFor="let item of getItems().entries;" style="margin-top:11px;">
         <mat-card-header>
-            <mat-card-title>{{feed.title}}</mat-card-title>
-            <mat-card-subtitle>{{feed.url}}
+            <mat-card-title>{{item.title}}</mat-card-title>
+            <mat-card-subtitle>{{item.url}}
             </mat-card-subtitle>
         </mat-card-header>
         <!-- <mat-card-content>
             <p>
-                {{feed.content}}
+                {{item.content}}
             </p>
         
         </mat-card-content> -->

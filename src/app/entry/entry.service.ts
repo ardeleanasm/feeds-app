@@ -9,7 +9,7 @@ import { Item } from '../items/item.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class FeedsService {
+export class EntryService {
   
   readonly REST_API_SERVER:string = "http://localhost:7000/items";
 

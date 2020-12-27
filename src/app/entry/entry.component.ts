@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../items/item.interface';
-import { FeedsService } from './feeds.service';
+import { EntryService } from './entry.service';
 import { Items } from '../items/items.interface';
 
 @Component({
-  selector: 'app-feeds',
-  templateUrl: './feeds.component.html',
-  styleUrls: ['./feeds.component.css']
+  selector: 'app-entry',
+  templateUrl: './entry.component.html',
+  styleUrls: ['./entry.component.css']
 })
-export class FeedsComponent implements OnInit {
+export class EntryComponent implements OnInit {
   
   error:any;
   private receivedItems:Items;
-  constructor(private feedsService:FeedsService) { 
+  constructor(private entriesService:EntryService) { 
     
   }
 
@@ -22,7 +22,7 @@ export class FeedsComponent implements OnInit {
   }
 
   performRequest() {
-    this.feedsService.sendGetRequest().subscribe(
+    this.entriesService.sendGetRequest().subscribe(
       (data: Items) => this.receivedItems = {...data},
       error => this.error = error
     )
@@ -40,7 +40,7 @@ export class FeedsComponent implements OnInit {
     return this.receivedItems;
   }
 
-  getFeeds() {
+  getItems() {
     return this.receivedItems;
   }
 
